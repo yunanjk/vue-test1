@@ -1,18 +1,30 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>This is home page</h1>
+    <!-- <p>{{ name }}</p> -->
+    <KossieCoder />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// @/ : src 폴더 뜻함
+import KossieCoder from '@/components/KossieCoder.vue';
 
 export default {
   name: 'HomeView',
+  data() {
+    return {
+      name: "Kossie Coder"
+    }
+  },
   components: {
-    HelloWorld
+    KossieCoder
   }
 }
 </script>
+
+<style>
+h1 {
+  color: red;
+}
+</style>
