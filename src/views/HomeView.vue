@@ -23,7 +23,9 @@ export default {
 }
 </script>
 
-<style>
+
+<style scoped lang="scss">
+// style scoped lang="scss" : 현재 파일에서만 style 적용시킨다는 뜻
 h1 {
   color: red;
 }
