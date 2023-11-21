@@ -2,7 +2,7 @@
   <div>
     <h1>This is home page</h1>
     <!-- <p>{{ name }}</p> -->
-    <KossieCoder />
+    <KossieCoder title="home title" age="25"/>
   </div>
 </template>
 
