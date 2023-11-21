@@ -1,11 +1,11 @@
 <template>
     <div>
-        <!-- <h1>title</h1> -->
-        <h1>{{ title }}</h1>
-        <h2>{{ age }}</h2>
-        <p>{{ name }}</p>
-        <br>
-        <button @click="updateName">update name</button>
+        <h3>HEADER</h3>
+        <!-- 부모 컴포넌트로 데이터를 보낼때 :kossie="kossie"에서 ':kossie'라고 속성명을 지정하고 data값 넘기면 됨 -->
+        <slot name="header" :kossie="kossie"></slot>
+        <h3>BODY</h3>
+        <slot></slot>
+        <h3>FOOTER</h3>
     </div>
 </template>
 
@@ -28,7 +28,8 @@ export default {
     },
     data() {
         return {
-            name: "Kossie Coder"
+            name: "Kossie Coder",
+            kossie: "coder"
         }
     },
     methods: {
