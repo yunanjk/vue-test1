@@ -1,24 +1,33 @@
 <template>
   <div>
     <h1>This is home page</h1>
-    <!-- <p>{{ name }}</p> -->
-    <KossieCoder title="home title" age="25"/>
+    <form action="">
+      <!-- <label for="">Name</label>
+      <input type="text" v-model="name" style="margin: 10px; padding: 20px; border: 3px solid green;">-->
+      <InputField :name="name" @update-name="updateName"/>
+      <button>submit</button>
+    </form>
+    {{ name }}
   </div>
 </template>
 
 <script>
-// @/ : src 폴더 뜻함
-import KossieCoder from '@/components/KossieCoder.vue';
+import InputField from "@/components/InputField.vue";
 
 export default {
   name: 'HomeView',
   data() {
     return {
-      name: "Kossie Coder"
+      name: ""
+    }
+  },
+  methods: {
+    updateName(name) {
+      this.name = name;
     }
   },
   components: {
-    KossieCoder
+    InputField
   }
 }
 </script>
